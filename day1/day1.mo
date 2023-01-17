@@ -23,17 +23,11 @@ actor {
   };
 
   public func test_divide(n: Nat, m : Nat) : async Bool {
-    if ((n % m) == 0)
-      return true
-    else
-      return false;
+    return (n % m) == 0;
   };
 
   public func is_even(n : Nat) : async Bool {
-    if ((n % 2) == 0)
-      return true
-    else
-      return false;
+    return (n % 2) == 0;
   };
 
 };
