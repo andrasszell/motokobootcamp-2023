@@ -80,28 +80,4 @@ actor {
 
   };
 
-  public func test() : async () {
-    var mytext = "cicacca";
-    let charnum = await count_character(mytext,'a');
-    Debug.print(debug_show(mytext));
-    Debug.print(debug_show(charnum));
-
-    //var myarr = [1,2,3,2,3,5,6,7,1];
-    var myarr = [10,5,12,18,5,13,10];
-    let duparr = await find_duplicates(myarr);
-    Debug.print(debug_show(myarr));
-    Debug.print(debug_show(duparr));
-
-    var mytext2 = "als ftr nht, fg";
-    let wordnum = await number_of_words(mytext2);
-    Debug.print(debug_show(mytext2));
-    Debug.print(debug_show(wordnum));
-
-    var mynum = 16;
-    let mybin = await convert_to_binary(mynum);
-    Debug.print(debug_show(mynum));
-    Debug.print(debug_show(mybin));
-
-  };
-
 };
