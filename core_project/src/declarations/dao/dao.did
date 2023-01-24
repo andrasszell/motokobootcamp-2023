@@ -1,0 +1,31 @@
+type v_pair = 
+ record {
+   no: nat;
+   yes: nat;
+ };
+type Proposal = 
+ record {
+   prop_text: text;
+   votes: v_pair;
+ };
+service : {
+  get_all_proposals: () -> (vec record {
+                                  int;
+                                  Proposal;
+                                }) query;
+  get_proposal: (nat) -> (variant {
+                            Err: text;
+                            Ok: Proposal;
+                          }) query;
+  submit_proposal: (text) -> (variant {
+                                Err: text;
+                                Ok: text;
+                              });
+  vote: (nat, bool) -> (variant {
+                          Err: text;
+                          Ok: record {
+                                nat;
+                                nat;
+                              };
+                        });
+}
